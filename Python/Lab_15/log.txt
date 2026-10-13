@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Implemented a Student Information Management System using nested dictionaries, where the student roll number acts as the unique primary key mapping to an inner dictionary containing Name, Branch, Semester, and a list of marks. Built options for adding, updating, searching, deleting, and calculating student percentages.
+
+2. Errors Faced:
+- Error 1: KeyError when querying or updating roll numbers that do not exist in the dictionary.
+  Fix: Added existence check `if roll_no in students:` before accessing inner student attributes.
+- Error 2: ZeroDivisionError when calculating average marks if a student had an empty marks list.
+  Fix: Checked `if len(marks) > 0` before computing `sum(marks) / len(marks)`.
+
+3. Output:
+Tested adding student profiles, viewing records in tabular layout, updating student records, computing total marks and percentages, and deleting records. Exited cleanly.

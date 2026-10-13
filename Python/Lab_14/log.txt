@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Designed a book catalog system using a list of tuples for storing structured book details (Title, Author, Publication Year, Category) and used Python sets and set operations (set comprehensions, set differences) to manage unique categories and compare student wishlist requests against available categories.
+
+2. Errors Faced:
+- Error 1: TypeError: 'tuple' object does not support item assignment when attempting to modify a book's category in place.
+  Fix: Kept tuples immutable as per design and handled updates by adding new tuple records to the list.
+- Error 2: Confusion between set difference directions (wishlist - categories vs categories - wishlist).
+  Fix: Correctly identified student_wishlist.difference(library_categories) for missing requested categories and library_categories.difference(student_wishlist) for available catalog categories not in the wishlist.
+
+3. Output:
+Tested catalog viewing, adding new book records, displaying distinct categories, adding items to wishlist, and running category gap analysis. Exited successfully on option 6.

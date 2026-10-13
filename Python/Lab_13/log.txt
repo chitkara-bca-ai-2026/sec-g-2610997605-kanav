@@ -1,0 +1,13 @@
+Lab Reflection:
+
+1. Approach:
+Implemented an interactive, menu-driven inventory management system using a Python list to track store items. Provided menu choices for viewing the catalog, adding items, removing items, and sorting inventory alphabetically using a while loop.
+
+2. Errors Faced:
+- Error 1: ValueError when attempting to remove an item that was not in the inventory list.
+  Fix: Added a validation check `if item_to_remove in inventory:` before invoking `inventory.remove()`.
+- Error 2: Unhandled leading and trailing whitespaces in user input leading to invalid menu selection.
+  Fix: Applied `.strip()` on input values (`input().strip()`).
+
+3. Output:
+Tested by displaying current inventory, successfully appending items like "Stapler", removing existing items, and sorting the items alphabetically. Exited cleanly on choice 5.
